@@ -7,6 +7,12 @@ Description: CSS样式表的初始化，全局样式设置。
 
 /* 初始化标签在所有浏览器中的margin、padding值 */
 html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html,
 body,
 div,
 dl,

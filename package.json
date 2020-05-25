@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.js",
-    "dev": "webpack-dev-server --config webpack.config.js"
+    "dev": "webpack-dev-server --mode development --hot --compress"
   },
   "repository": {
     "type": "git",
@@ -19,10 +19,9 @@
   },
   "homepage": "https://github.com/wq89855254/FIT#readme",
   "dependencies": {
+    "element-ui": "^2.13.2",
     "vue": "^2.6.11",
-    "vue-template-compiler": "^2.6.11",
-    "webpack": "^4.43.0",
-    "webpack-dev-server": "^3.11.0"
+    "vue-template-compiler": "^2.6.11"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
@@ -39,6 +38,9 @@
     "style-loader": "^1.2.1",
     "url-loader": "^4.1.0",
     "vue-loader": "^15.9.2",
-    "webpack-cli": "^3.3.11"
+    "vue-router": "^3.2.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
   }
 }
