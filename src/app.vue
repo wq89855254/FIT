@@ -10,4 +10,8 @@
   width: 100%;
   height: 100%;
 }
+@font-face {
+    font-family: 'xs';
+    src: url('./assets/fonts/xingshu.ttf');
+}
 </style>

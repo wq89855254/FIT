@@ -2,40 +2,24 @@ export default {
     components: {},
     data() {
         return {
-
+            scrollTimeout:null,
         };
     },
     computed: {},
     watch: {},
-    created() {
-        window.addEventListener('mousewheel', e => {
-            this.scroll = document.documentElement.scrollTop || document.body.scrollTop;
-            console.log(e)
-        })
-        // Vue.directive('scroll', {
-        //     // 当绑定元素插入到 DOM 中
-        //     inserted: function (el,binding) {
-        //       var cb = binding.value
-        //       el.addEventListener('mousewheel',function(e){
-        //         var direction = e.deltaY>0?'down':'up'
-        //         cb(direction)
-        //       })
-        //     }
-        //   })
-
-        //   new Vue({
-        //     el:'#app',
-        //     methods:{
-        //       scrollFn:function(direction){
-        //         console.log(direction)
-        //       }
-        //     }
-        //   })
-    },
-    mounted() {
-
-    },
+    created() {},
+    mounted() {},
     methods: {
-
+        scrollCtrl(isNext){
+            clearTimeout(this.scrollTimeout)
+            this.scrollTimeout=setTimeout(()=>{
+                if(isNext){
+                    this.$refs.carousel.next()
+                }else{
+                    this.$refs.carousel.prev()
+                }
+            },200)
+        },
+       
     },
 }

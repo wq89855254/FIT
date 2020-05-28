@@ -4,6 +4,43 @@
   height: 100%;
 }
 
+.loginMask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+.loginMask > .loginCircle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 350px;
+  height: 350px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 350px;
+  border-radius: 50%;
+  font-family: 'xs';
+  font-size: 100px;
+  border: 1px solid #000;
+}
+
+.loginMask > .left {
+  width: 50%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.loginMask > .right {
+  width: 50%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+}
+
 .block {
   width: 100%;
   height: 100%;
