@@ -12,6 +12,7 @@
   width: 100%;
   height: 100%;
   z-index: 100;
+  overflow: hidden;
 }
 
 .loginMask > .loginCircle {
@@ -26,19 +27,33 @@
   border-radius: 50%;
   font-family: 'xs';
   font-size: 100px;
-  border: 1px solid #000;
+  color: #646669;
+  border: 1px solid #646669;
+  cursor: pointer;
+  transition: 1.2s;
+}
+
+.loginMask > .loginCircle:hover {
+  box-shadow: 0 0 10px 0 #668de2;
+  color: #fff;
+}
+
+.loginMask > .loginCircle.active {
+  animation: mymove 1.3s infinite;
 }
 
 .loginMask > .left {
   width: 50%;
   height: 100%;
   background: rgba(0, 0, 0, 0.9);
+  transition: 0.8s;
 }
 
 .loginMask > .right {
   width: 50%;
   height: 100%;
   background: rgba(0, 0, 0, 0.9);
+  transition: 0.8s;
 }
 
 .block {
@@ -63,6 +78,59 @@
   background-image: url("../../assets//images/road.jpg");
 }
 
+.homePic .triangleWrap {
+  position: relative;
+  display: flex;
+}
+
+.homePic .triangleWrap .topTriangle, .homePic .triangleWrap .bottomTriangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  transition: 2s;
+}
+
+.homePic .triangleWrap .topTriangle {
+  transform: translateX(-1999px);
+}
+
+.homePic .triangleWrap .bottomTriangle {
+  transform: translateX(1999px);
+}
+
+.homePic .triangleWrap .contentWrap {
+  position: relative;
+  font-family: 'xs';
+  font-size: 30px;
+  color: #e9f1ff;
+}
+
+.homePic .triangleWrap .contentWrap .content {
+  position: absolute;
+  top: 470px;
+  left: 110px;
+  width: 300px;
+  height: 300px;
+  padding: 20px 15px;
+}
+
+.homePic .triangleWrap .contentWrap .content > div {
+  margin-top: 18px;
+}
+
+.homePic .triangleWrap .contentWrap .content2 {
+  position: absolute;
+  top: 260px;
+  left: 900px;
+  width: 300px;
+  height: 300px;
+  padding: 20px 15px;
+}
+
+.homePic .triangleWrap .contentWrap .content2 > div {
+  margin-bottom: 18px;
+}
+
 .el-carousel {
   height: 100%;
 }
@@ -81,4 +149,22 @@
 
 .el-carousel__item:nth-child(2n + 1) {
   background-color: #d3dce6;
+}
+
+@keyframes mymove {
+  0% {
+    box-shadow: 0px -2px 10px 0 #668de2;
+  }
+  25% {
+    box-shadow: 4px 0px 10px 0 #668de2;
+  }
+  50% {
+    box-shadow: 0px 2px 10px 0 #668de2;
+  }
+  75% {
+    box-shadow: -4px 0px 10px 0 #668de2;
+  }
+  100% {
+    box-shadow: 0 -2px 10px 0 #668de2;
+  }
 }
